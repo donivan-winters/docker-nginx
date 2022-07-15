@@ -1,5 +1,5 @@
 # Build a Docker image
-task: prisma-cloud-compute-scan@3
+- task: prisma-cloud-compute-scan@3
   inputs:
     scanType: 'images'
     twistlockService: 'Compute SaaS'

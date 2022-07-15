@@ -3,7 +3,7 @@
   inputs:
     scanType: 'images'
     twistlockService: 'Compute SaaS'
-    artifact: 'ubuntu:latest'
+    artifact: 'donivan-winters/docker-nginx'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 

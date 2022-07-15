@@ -1,4 +1,10 @@
 # Build a Docker image
+steps:
+- task: prisma-cloud-compute-scan@3
+  inputs:
+    scanType: 'images'
+    twistlockService: 'Compute SaaS'
+    artifact: 'docker-nginx'
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
@@ -18,7 +24,8 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
-    steps:
+
+  steps:
     - task: Docker@2
       displayName: Build an image
       inputs:

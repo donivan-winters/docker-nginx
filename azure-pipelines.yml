@@ -3,7 +3,7 @@
   inputs:
     scanType: 'images'
     twistlockService: 'Compute SaaS'
-    artifact: 'docker-nginx'
+    artifact: 'ubuntu-latest'
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:

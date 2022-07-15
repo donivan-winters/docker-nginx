@@ -1,12 +1,13 @@
 # Build a Docker image
+- task: prisma-cloud-compute-scan@3
+  inputs:
+    scanType: 'images'
+    twistlockService: 'Compute SaaS'
+    artifact: 'docker-nginx'
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-trigger:
-- master
-
-resources:
+- trigger: master
 - repo: self
-
 variables:
   tag: '$(Build.BuildId)'
 

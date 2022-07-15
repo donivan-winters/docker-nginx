@@ -16,7 +16,16 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
-    steps:
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+
+steps:
     - task: Docker@2
       displayName: Build an image
       inputs:

@@ -1,4 +1,9 @@
 # Docker
+- task: prisma-cloud-compute-scan@3
+  inputs:
+    scanType: 'images'
+    twistlockService: 'Compute SaaS'
+    artifact: 'ubuntu-latest'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
